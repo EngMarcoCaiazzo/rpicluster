@@ -1,7 +1,0 @@
----
-
-- hosts: rpi
-  roles:
-    - apt
-  become: true
-  remote_user: pi

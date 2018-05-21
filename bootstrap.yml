@@ -1,0 +1,8 @@
+---
+
+- hosts: rpis
+  roles:
+#    - apt
+#    - hostname
+    - debug
+  become: yes
