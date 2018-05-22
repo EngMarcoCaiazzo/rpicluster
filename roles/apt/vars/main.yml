@@ -1,0 +1,8 @@
+---
+# vars file
+
+packages:
+   - vim
+#  - openvpn
+#  - iptables
+#  - easy-rsa

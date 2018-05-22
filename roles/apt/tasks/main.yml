@@ -3,3 +3,10 @@
 - name: Run the equivalent of "apt-get update" as a separate step
   apt:
     update_cache: yes
+
+- name: Install packages
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages }}"
+  
