@@ -2,7 +2,8 @@
 
 - hosts: rpis
   roles:
-    - apt
+#    - apt
 #    - hostname
-#    - debug
+    - debug
+#     - network
   become: yes

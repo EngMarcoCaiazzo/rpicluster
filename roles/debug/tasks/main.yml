@@ -1,3 +1,26 @@
+#- debug:
+#    msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }} and ip {{ ansible_host }}"
+#  when: ansible_default_ipv4.gateway is defined
+
+#- debug:
+#    msg: {{ hostvars[inventory_hostname]['ansible_default_ipv4']['address'] }}
+
+
+# {% for host in groups['rpis'] %}
+#   {{ hostvars[host]['ansible_default_ipv4']['address'] }}
+# {% endfor %}
+
+#- name: 'Dump all vars in /tmp/ansible.all'
+#  template:
+#    src: dumpall.j2
+#    dest: /tmp/ansible.all
+#    mode: 0600
+
+#- debug:
+#    msg: " wlan0 ip address {{ wlan0_address }} "
+#
 - debug:
-    msg: "System {{ inventory_hostname }} has gateway {{ ansible_default_ipv4.gateway }} and ip {{ ansible_host }}"
-  when: ansible_default_ipv4.gateway is defined
+    msg: " eth0 ip address {{ eth0_address }} "
+
+#- debug:
+#    msg: " gw  ip address {{ gw }} "
