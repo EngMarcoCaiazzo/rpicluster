@@ -1,6 +1,13 @@
 {{ ansible_managed }}
 
+{% for host in groups['all'] %}
+{% if 'ansible_eth0' in hostvars[host] %}
+{{ hostvars[host]['ansible_eth0']['ipv4']['address'] }} {{ host }} {{ host }}.local
+{% endif %}
+{% endfor %}
 
+
+{#
 Module Variables ("vars"):
 --------------------------------
 {{ vars | to_nice_json }}
@@ -20,3 +27,5 @@ GROUPS Variables ("groups"):
 HOST Variables ("hostvars"):
 --------------------------------
 {{ hostvars[inventory_hostname] | to_nice_json }}
+
+#}

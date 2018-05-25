@@ -1,5 +1,5 @@
 [rpis]
-rpi1 ansible_host=172.16.1.1
-rpi2 ansible_host=172.16.1.2
-rpi3 ansible_host=172.16.1.3
-rpi4 ansible_host=172.16.1.4
+rpi1 ansible_host=192.168.1.1
+rpi2 ansible_host=192.168.1.2
+rpi3 ansible_host=192.168.1.3
+rpi4 ansible_host=192.168.1.4

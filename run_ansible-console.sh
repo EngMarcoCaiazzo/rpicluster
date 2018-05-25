@@ -5,4 +5,4 @@ docker run --rm -it \
 -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub \
 --entrypoint ansible-console \
 -v $(pwd):/ansible/playbooks \
-mc75/ansible "$@" -vvv
+mc75/ansible "$@"

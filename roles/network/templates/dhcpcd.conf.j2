@@ -1,9 +1,10 @@
-# {{ ansible_managed }}
-
 interface wlan0
 static ip_address={{ wlan0_address }}/24
 static routers={{ gw }}
 static domain_name_servers=8.8.8.8
+
+interface eth0
+static ip_address={{ eth0_address }}/24
 
 # A sample configuration for dhcpcd.
 # See dhcpcd.conf(5) for details.

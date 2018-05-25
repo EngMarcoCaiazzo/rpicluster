@@ -3,7 +3,7 @@
 - hosts: rpis
   roles:
 #    - apt
-#    - hostname
-    - debug
-#     - network
+     - hostname
+#    - debug
+     - network
   become: yes
