@@ -1,0 +1,7 @@
+---
+
+- hosts: gateway
+  roles:
+    - PiVPN
+  become: yes
+  become_method: su
