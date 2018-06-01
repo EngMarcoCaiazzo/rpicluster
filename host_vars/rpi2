@@ -1,2 +1,2 @@
-eth0_address: 172.16.0.2
-wlan0_address: 192.168.1.2
+eth0_address: 192.168.1.2
+wlan0_address: 192.168.1.20

@@ -4,9 +4,12 @@
   apt:
     update_cache: yes
 
+- name: 'Upgrade system to the latest packages'
+  apt:
+    upgrade: safe
+
 - name: Install packages
   apt:
     name: "{{ item }}"
     state: latest
   with_items: "{{ packages }}"
-  

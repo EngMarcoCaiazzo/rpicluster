@@ -2,5 +2,5 @@
 #- name: 'apply raspi-config'
 #  command: raspi-config --apply-os-config
 #
-- name: 'Restart dhcpcd'
+- name: Restart dhcpcd
   service: name=dhcpcd state=restarted

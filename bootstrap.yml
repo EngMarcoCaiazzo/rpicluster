@@ -2,8 +2,12 @@
 
 - hosts: rpis
   roles:
-#    - apt
-     - hostname
+#     - hostname
+#     - reboot
+#     - apt
+#     - common
+#     - reboot
 #    - debug
      - network
+#     - reboot
   become: yes

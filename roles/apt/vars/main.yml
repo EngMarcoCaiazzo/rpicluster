@@ -2,7 +2,7 @@
 # vars file
 
 packages:
-   - vim
+#   - vim
 #  - openvpn
 #  - iptables
 #  - easy-rsa
