@@ -3,6 +3,13 @@
     src: rc.local.j2
     dest: /etc/rc.local
 
+- name: 'create ~/.ssh'
+  shell: install -d -m 700 ~/.ssh
+
+# non funziona
+#- name: 'copy keys across'
+#  shell: cat ~/.ssh/id_rsa.pub | ssh pi@{{ ansible_default_ipv4.gateway }} 'cat >> .ssh/authorized_keys'
+
 #- name: 'Set keyboard'
 #  replace:
 #    destfile: /etc/default/keyboard

@@ -47,9 +47,9 @@
 #     line: ' pre-up /etc/firewall-openvpn-rules.sh'
 #   notify: restart networking
 
-- name: Enable OpenVPN firewall rule execution in the network interface wlan0
+- name: Enable OpenVPN firewall rule execution in the network interface eth0
   lineinfile:
     dest: /etc/network/interfaces
-    insertafter: '^iface wlan0'
+    insertafter: '^iface eth0'
     line: ' pre-up /etc/firewall-openvpn-rules.sh'
   notify: restart networking

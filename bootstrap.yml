@@ -3,11 +3,8 @@
 - hosts: rpis
   roles:
 #     - hostname
-#     - reboot
 #     - apt
-#     - common
-#     - reboot
+     - common
 #    - debug
-     - network
-#     - reboot
+#     - network
   become: yes

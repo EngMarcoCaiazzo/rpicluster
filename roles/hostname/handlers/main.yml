@@ -1,8 +1,13 @@
+---
+#- name: 'apply raspi-config'
+#  command: raspi-config --apply-os-config
+#
 - name: Reboot
   shell: sleep 2 && shutdown -r now "Ansible Reboot now"
   async: 1
   poll: 0
   ignore_errors: True
+  notify: Wait for Reboot
 
 - name: Wait for Reboot
   local_action: wait_for
@@ -11,4 +16,5 @@
     port: 22
     delay: 25
     timeout: 100
+    state: started
   become: False
