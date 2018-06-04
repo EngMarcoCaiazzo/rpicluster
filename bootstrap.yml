@@ -4,7 +4,7 @@
   roles:
 #     - hostname
 #     - apt
-     - common
-#    - debug
+      - common
+#      - debug
 #     - network
   become: yes

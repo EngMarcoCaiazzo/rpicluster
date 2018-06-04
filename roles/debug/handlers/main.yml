@@ -1,7 +1,7 @@
 ---
-- name: 'apply raspi-config'
-  command: raspi-config --apply-os-config
-
+#- name: 'apply raspi-config'
+#  command: raspi-config --apply-os-config
+#
 - name: Reboot
   shell: sleep 2 && shutdown -r now "Ansible Reboot now"
   async: 1

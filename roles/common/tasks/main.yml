@@ -6,6 +6,12 @@
 - name: 'create ~/.ssh'
   shell: install -d -m 700 ~/.ssh
 
+- name: Set authorized key took from file
+  authorized_key:
+    user: pi
+    state: present
+    key: "{{ lookup('file', '/root/.ssh/id_rsa.pub') }}"
+
 # non funziona
 #- name: 'copy keys across'
 #  shell: cat ~/.ssh/id_rsa.pub | ssh pi@{{ ansible_default_ipv4.gateway }} 'cat >> .ssh/authorized_keys'
@@ -35,3 +41,13 @@
     config_vals: "{{raspi_config_other_options}}"
   notify:
     - apply raspi-config
+
+- name: 'Video memory to lowest options at boot'
+  copy:
+    src: cmdline.txt
+    dest: /boot/cmdline.txt
+    owner: root
+    group: root
+    mode: 0755
+  register: cmdline
+  notify: Reboot
