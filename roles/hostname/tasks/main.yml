@@ -8,5 +8,5 @@
 #  notify:
 #    - Reboot
 
-- name: Restart hostname
-  shell: "hostnamectl set-hostname {{ inventory_hostname }}"
+#- name: Restart hostname
+#  shell: "hostnamectl set-hostname {{ inventory_hostname }}"
