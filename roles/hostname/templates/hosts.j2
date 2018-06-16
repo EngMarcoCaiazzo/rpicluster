@@ -6,6 +6,8 @@ ff02::2		ip6-allrouters
 
 127.0.1.1	{{inventory_hostname}}
 
+
+#when bootstrap it takes the wrong IP address. Uses the host_var instead.!!
 {% for host in groups['all'] %}
 {% if 'ansible_eth0' in hostvars[host] %}
 {{ hostvars[host]['ansible_eth0']['ipv4']['address'] }} {{ host }} {{ host }}.local
